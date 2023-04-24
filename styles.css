@@ -1,0 +1,29 @@
+#observablehq-chart-6af38e2c{ /* the chart */
+    max-width: 900px;
+    min-width: 200px;
+    display: flex;
+    aspect-ratio: 1.5;
+}
+.visualization{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+.visualization div{
+    flex-grow: 0.5;
+    padding: 10px;
+    min-width: 200px;
+}
+
+#observablehq-viewof-keyz-6af38e2c select{ /* the selector */
+    max-width: 100%;
+    background-color: black;
+    color: white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0.5em 2em 0.5em 1em;
+}
+
+#observablehq-key-6af38e2c{ /* the color label */
+}

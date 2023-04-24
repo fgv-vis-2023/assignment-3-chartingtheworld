@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>🌎 Charting the World </title>
+</head>
+<body>
+<body>
+    <div class="visualization">
+        <div class="left">
+            <div id="observablehq-viewof-yearFilter-6af38e2c"></div>
+            <div id="observablehq-viewof-projection_switch-6af38e2c"></div>
+            <div id="observablehq-key-6af38e2c"></div>
+            <div id="observablehq-chart-6af38e2c"></div>
+        </div>
+        <div class="right">
+            <div id="observablehq-viewof-keyz-6af38e2c"></div>
+        </div>
+    </div>
+    <p>Credit: <a href="https://observablehq.com/d/e54b1f5de5bf7418@553">Charting the World by Gustavo Sanches, Lucas Treuke and Rodrigo Pintucci</a></p>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+    <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/d/e54b1f5de5bf7418@553.js?v=3";
+    new Runtime().module(define, name => {
+      if (name === "viewof yearFilter") return new Inspector(document.querySelector("#observablehq-viewof-yearFilter-6af38e2c"));
+      if (name === "viewof projection_switch") return new Inspector(document.querySelector("#observablehq-viewof-projection_switch-6af38e2c"));
+      if (name === "key") return new Inspector(document.querySelector("#observablehq-key-6af38e2c"));
+      if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-6af38e2c"));
+      if (name === "viewof keyz") return new Inspector(document.querySelector("#observablehq-viewof-keyz-6af38e2c"));
+      return ["data","projection"].includes(name);
+    });
+    </script>
+</body>
+</html>
