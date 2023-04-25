@@ -9,19 +9,19 @@ body{
 }
 
 h1{
+    display: inline-block;
     font-size: 2.1em;
     font-weight: 800;
-    text-align: end;
     margin: 0;
     /* color: #01010d; */
-    padding: 0px 40px;
+    /* padding: 0px 40px; */
 }
 h2 {
+    display: inline-block;
     font-size: 1.1em;
-    text-align: end;
     margin: 0;
     /* color: #01010d; */
-    padding: 0px 40px;
+    /* padding: 0px 40px; */
 }
 
 .selectors{
@@ -68,7 +68,6 @@ h2 {
     /* align content to the right */
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
 }
 .visualization .right{
     flex-grow: 0.4;
