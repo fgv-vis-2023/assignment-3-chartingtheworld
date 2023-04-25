@@ -8,31 +8,51 @@
     <title>🌎 Charting the World </title>
 </head>
 <body>
-<body>
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="visualization">
+        <div class="top">
+            <h1>Charting the world</h1>
+            <h2>Your guide to global data</h2>
+            <div class="selectors">
+
+            </div>
+        </div>
         <div class="left">
-            <div id="observablehq-viewof-yearFilter-6af38e2c"></div>
-            <div id="observablehq-viewof-projection_switch-6af38e2c"></div>
-            <div id="observablehq-key-6af38e2c"></div>
-            <div id="observablehq-chart-6af38e2c"></div>
+            <div id="observablehq-viewof-yearFilter-d17b00ef"></div>
+            <div id="observablehq-viewof-projection_switch-d17b00ef"></div>
+            <div id="observablehq-key-d17b00ef"></div>
+            <div id="chart"><div id="observablehq-chart-d17b00ef"></div></div>
         </div>
         <div class="right">
-            <div id="observablehq-viewof-keyz-6af38e2c"></div>
+            <div id="observablehq-viewof-keyz-d17b00ef"></div>
+            <div id="observablehq-viewof-columns_coordinates-d17b00ef"></div>
+            <div id="observablehq-viewof-selection-d17b00ef"></div>
         </div>
     </div>
-    <p>Credit: <a href="https://observablehq.com/d/e54b1f5de5bf7418@553">Charting the World by Gustavo Sanches, Lucas Treuke and Rodrigo Pintucci</a></p>
     
+    <p>Credit: <a href="https://observablehq.com/d/73cb3dcdc6d879de@591">Charting the World by amigos</a></p>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
     <script type="module">
     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-    import define from "https://api.observablehq.com/d/e54b1f5de5bf7418@553.js?v=3";
+    import define from "https://api.observablehq.com/d/73cb3dcdc6d879de@591.js?v=3";
     new Runtime().module(define, name => {
-      if (name === "viewof yearFilter") return new Inspector(document.querySelector("#observablehq-viewof-yearFilter-6af38e2c"));
-      if (name === "viewof projection_switch") return new Inspector(document.querySelector("#observablehq-viewof-projection_switch-6af38e2c"));
-      if (name === "key") return new Inspector(document.querySelector("#observablehq-key-6af38e2c"));
-      if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-6af38e2c"));
-      if (name === "viewof keyz") return new Inspector(document.querySelector("#observablehq-viewof-keyz-6af38e2c"));
-      return ["data","projection"].includes(name);
+      if (name === "viewof yearFilter") return new Inspector(document.querySelector("#observablehq-viewof-yearFilter-d17b00ef"));
+      if (name === "viewof projection_switch") return new Inspector(document.querySelector("#observablehq-viewof-projection_switch-d17b00ef"));
+      if (name === "key") return new Inspector(document.querySelector("#observablehq-key-d17b00ef"));
+      if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-d17b00ef"));
+      if (name === "viewof keyz") return new Inspector(document.querySelector("#observablehq-viewof-keyz-d17b00ef"));
+      if (name === "viewof columns_coordinates") return new Inspector(document.querySelector("#observablehq-viewof-columns_coordinates-d17b00ef"));
+      if (name === "viewof selection") return new Inspector(document.querySelector("#observablehq-viewof-selection-d17b00ef"));
+      return ["data","x","z","line","projection"].includes(name);
     });
     </script>
 </body>
