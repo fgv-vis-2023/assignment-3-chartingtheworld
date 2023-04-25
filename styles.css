@@ -66,9 +66,10 @@ h2 {
 }
 
 .left form button {
-    color: #01010d;
+    /* color: #01010d; */
     /* removendo o esitlo do botão */
     background: #e9e8f8;
+    color: transparent;
     border: none;
     padding: 5px 10px;
     border-radius: 2px;
@@ -160,6 +161,7 @@ h2 {
 
 .innerRight table label:hover{
     color: rgb(200, 191, 231) !important;
+    font-size: 1em !important;
     background-color: #1e1e29;
 }
 
@@ -177,6 +179,10 @@ h2 {
 
 a{
     color: #a97bd1
+}
+
+.parallel_coords svg .tick:hover text{
+  font-size: 25px !important;
 }
 
 .selectors form select{
@@ -210,6 +216,7 @@ a{
     top: 0;
     height: 100%;
     width: 100%;
+    pointer-events: none;
 }
 
 .features_selector form {
