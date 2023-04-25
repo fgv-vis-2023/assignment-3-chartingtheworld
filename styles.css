@@ -1,33 +1,67 @@
 body{
     /* background-color: #e9e8f8; */
     /* color: #01010d; */
-    background-color: #01010d;
+    background-color: #1e1e29;
     color: #e9e8f8;
     max-width: 100vw;
     overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
 }
 
+.title{
+    padding-bottom: 25px;
+}
+
 h1{
     display: inline-block;
-    font-size: 2.1em;
+    font-size: 1.8em;
     font-weight: 800;
     margin: 0;
     /* color: #01010d; */
-    /* padding: 0px 40px; */
+    padding: 0px 10px;
+    align-self: flex-end;
+    line-height: 1;
+    
 }
 h2 {
     display: inline-block;
-    font-size: 1.1em;
+    font-size: 1.0em;
     margin: 0;
     /* color: #01010d; */
-    /* padding: 0px 40px; */
+    padding: 0px 10px;
+    line-height: 1;
+    align-self: flex-end;
 }
 
 .selectors{
-    padding: 0px 40px;
+    width: 45%;
+    min-width: 275px;
+    /* makes this element go to the right */
+    float: right; 
 }
 
+.colorLabel{
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.colorLabel svg{
+    transform: rotate(90deg);
+    transform-origin: left;
+    overflow: visible;
+    display: block;
+}
+
+.colorLabel svg g text{
+    transform: rotate(270deg);
+}
+.colorLabel svg .tick text{
+    transform: rotate(270deg) translate(12px, 13px);
+    transform-origin: left;
+}
 
 .left form button {
     color: #01010d;
@@ -42,18 +76,22 @@ h2 {
     font-family: 'Roboto', sans-serif;
 }
 
+#chart{height: 100%;}
 #chart>div{ /* the chart */
     display: flex;
     aspect-ratio: 1 / 1;
     margin: 0 auto;
+    height: 100%;
     justify-content: center;
 }
 .visualization{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
 }
 .visualization > div{
+    display: flex;
     padding: 10px;
     min-width: 400px;
     width: 45%;
@@ -61,6 +99,14 @@ h2 {
 
 .visualization .top{
     width: 100%;
+    padding: 10px 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.visualization .top .space{
+    flex-grow: 1;
+    max-width: 10vw;
 }
 
 .visualization .left{
@@ -68,14 +114,54 @@ h2 {
     /* align content to the right */
     display: flex;
     flex-direction: column;
+    position: relative;
+    height: 600px;
+    max-height: 120vw;
 }
 .visualization .right{
     flex-grow: 0.4;
     /* align content to the center */
-    display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     max-width: 500px;
+}
+
+.visualization .right .innerRight{
+    height: max-content;
+    width: 100%;
+    position: relative;
+    /* background-color: aliceblue; */
+}
+
+.innerRight table{
+    pointer-events: none;
+    text-align: start;
+    height: 110%;
+    /* transform: translate(0, -30px); */
+    transform: translate(-17px, -22px);
+}
+
+.innerRight table td{
+    text-align: left !important;
+}
+
+.innerRight table label{
+    pointer-events: all;
+    display: inline-flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    color: transparent !important;
+    cursor: pointer;
+}
+
+.innerRight table label:hover{
+    color: rgb(200, 191, 231) !important;
+    background-color: #1e1e29;
+}
+
+.innerRight table input{
+    accent-color: #a97bd1;
 }
 
 .selectors form{
@@ -85,9 +171,15 @@ h2 {
     flex-direction: column;
 }
 
+a{
+    color: #a97bd1
+}
+
 .selectors form select{
+    cursor: pointer;
     font-family: 'Roboto', sans-serif;
     position: relative;
+    display: block;
     background-color: #e9e8f8;
     outline: none;
     max-width: 100%;
@@ -100,18 +192,292 @@ h2 {
 .selectors form select option{
     font-family: 'Roboto', sans-serif;
     background-color: #e9e8f8;
-    color: #01010d;
+    color: #1e1e29;
 }
 
 
-.selectors form select::before{
-    content: ">";
-    /* color: #e9e8f8; */
+.parallel_coords{
+    /* background-color: rgb(185, 93, 93); */
+    height: 100%;
+}
+
+.features_selector{
     position: absolute;
-    right: 1em;
-    top: 0.5em;
-    font-size: 1.2em;
-    pointer-events: none;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.features_selector form {
+    height: 100%;
+}
+
+.features_selector form select{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* select {
+    appearance: none;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='currentColor' d='M19.78 10.61l-7.07 7.07c-.39.39-1.02.39-1.41 0l-7.07-7.07c-.39-.39-.39-1.02 0-1.41l1.41-1.41c.39-.39 1.02-.39 1.41 0L12 14.18l5.78-5.78c.39-.39 1.02-.39 1.41 0l1.41 1.41c.39.39.39 1.02 0 1.41z'/%3E%3C/svg%3E");
+    background-position: right center;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+} */
+
+.features_selector form select option {
+display: inline-block;
+width: 100%;
+}
+
+select option:first-child {
+margin-top: 10px;
+}
+
+select option:last-child {
+margin-bottom: 10px;
+}
+
+.yearSlider{
+position: absolute;
+bottom: 20px;
+width: 100%;
+align-items: center;
+justify-content: center;
+display: block;
+}
+
+.yearSlider form{
+width: 100%;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+animation: all 0.2s;
+}
+
+.yearSlider form:hover{
+    filter: drop-shadow(0 0 0.5rem rgb(36, 28, 63));
+}
+
+.yearSlider input {
+    width: 250px !important;
+}
+
+.yearSlider button{
+    color: transparent;
+    position: relative;
+    width: 40px !important;
+    background-color: transparent !important;
+}
+
+.yearSlider button::before{
+    content: "⏵";
+    font-size: 1.3em;
+    line-height: 0.8;
+    color: #e9e8f8;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     height: 20px;
     width: 20px;
+    animation: all 0.2s;
+    text-shadow: 0 0 0 #1e1e29;
 }
+
+.yearSlider button:hover::before{
+    color: rgb(200, 191, 231);
+}
+
+.yearSlider button:active::before{
+    color: rgb(200, 191, 231);
+    transform: translate(-50%, -50%) scale(0.8);
+}
+
+.projectionToggle{
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+}
+
+.projectionToggle form button{
+    background-color: transparent;
+    color: #e9e8f8;
+    border-bottom: 1px solid #e9e8f8;
+    animation: all 0.2s;
+}
+
+.projectionToggle form button:hover{
+    color: rgb(200, 191, 231);
+    border-bottom: 1px solid rgb(200, 191, 231);
+}
+
+.projectionToggle form button:active{
+    color: rgb(200, 191, 231);
+    border-bottom: 1px solid rgb(200, 191, 231);
+    transform: scale(0.9);
+}
+
+
+input[type=range] {
+    height: 26px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+    background-color: transparent;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 1px 1px 6px #9E8CC2;
+    background: #FFFFFF;
+    border-radius: 11px;
+    border: 0px solid #000000;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 2px solid #D4C3E3;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: #F7F2FF;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -9px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #FFFFFF;
+  }
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 1px 1px 6px #9E8CC2;
+    background: #FFFFFF;
+    border-radius: 11px;
+    border: 0px solid #000000;
+  }
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 2px solid #D4C3E3;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: #F7F2FF;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #FFFFFF;
+    border: 0px solid #000000;
+    border-radius: 22px;
+    box-shadow: 1px 1px 6px #9E8CC2;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #FFFFFF;
+    border: 0px solid #000000;
+    border-radius: 22px;
+    box-shadow: 1px 1px 6px #9E8CC2;
+  }
+  input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 0px 0px 0px #000000;
+    border: 2px solid #D4C3E3;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: #F7F2FF;
+    cursor: pointer;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #FFFFFF;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #FFFFFF;
+  }
+  
+
+select {
+
+    /* styling */
+    background-color: #e9e8f8;
+    border: thin solid #e9e8f8;
+    border-radius: 4px;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.5em;
+    padding: 0.5em 3.5em 0.5em 1em;
+  
+    /* reset */
+  
+    margin: 0;      
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    transition: all 0.3s;
+  }
+  
+
+select {
+    background-image:
+      linear-gradient(45deg, transparent 50%, gray 50%),
+      linear-gradient(135deg, gray 50%, transparent 50%),
+      linear-gradient(to right, #ccc, #ccc);
+    background-position:
+      calc(100% - 20px) calc(1em + 2px),
+      calc(100% - 15px) calc(1em + 2px),
+      calc(100% - 2.5em) 0.5em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1px 1.5em;
+    background-repeat: no-repeat;
+  }
+  
+  select:focus {
+    background-image:
+      linear-gradient(45deg, rgb(77, 38, 163) 50%, transparent 50%),
+      linear-gradient(135deg, transparent 50%, rgb(72, 30, 176) 50%),
+      linear-gradient(to right, #ccc, #ccc);
+    background-position:
+      calc(100% - 15px) 1em,
+      calc(100% - 20px) 1em,
+      calc(100% - 2.5em) 0.5em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1px 1.5em;
+    background-repeat: no-repeat;
+    border-color: rgb(105, 43, 205);
+    outline: 0;
+  }
+  
+  
+  select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+  }  

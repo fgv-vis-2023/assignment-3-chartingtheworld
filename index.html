@@ -8,52 +8,51 @@
     <title>🌎 Charting the World </title>
 </head>
 <body>
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="visualization">
         <div class="top">
-            <h1>Charting the world</h1>
-            <h2>Your guide to global data</h2>
+            <div class="title">
+                <h1>Charting the world</h1>
+                <h2>Your guide to global data</h2>
+            </div>
+            <div class="space"></div>
             <div class="selectors">
-
+                <div id="observablehq-viewof-keyz-9bca8110"></div>
             </div>
         </div>
         <div class="left">
-            <div id="observablehq-viewof-yearFilter-d17b00ef"></div>
-            <div id="observablehq-viewof-projection_switch-d17b00ef"></div>
-            <div id="observablehq-key-d17b00ef"></div>
-            <div id="chart"><div id="observablehq-chart-d17b00ef"></div></div>
+            <div class="yearSlider" id="observablehq-viewof-yearFilter-9bca8110"></div>
+            <div class="projectionToggle" id="observablehq-viewof-projection_switch-9bca8110"></div>
+            <div class="colorLabel" id="observablehq-key-9bca8110"></div>
+            <div id="chart"><div id="observablehq-chart-9bca8110"></div></div>
         </div>
         <div class="right">
-            <div id="observablehq-viewof-keyz-d17b00ef"></div>
-            <div id="observablehq-viewof-columns_coordinates-d17b00ef"></div>
-            <div id="observablehq-viewof-selection-d17b00ef"></div>
+            <div class="innerRight">
+                <div class="features_selector" id="observablehq-viewof-columns_coordinates-9bca8110"></div>
+                <!-- <div class="features_selector"></div> -->
+                <div class="parallel_coords" id="observablehq-viewof-selection-9bca8110"></div>
+            </div>
         </div>
     </div>
     
     <p>Credit: <a href="https://observablehq.com/d/73cb3dcdc6d879de@591">Charting the World by amigos</a></p>
-
+        
+        
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
     <script type="module">
     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-    import define from "https://api.observablehq.com/d/73cb3dcdc6d879de@591.js?v=3";
+    import define from "https://api.observablehq.com/d/73cb3dcdc6d879de@852.js?v=3";
     new Runtime().module(define, name => {
-      if (name === "viewof yearFilter") return new Inspector(document.querySelector("#observablehq-viewof-yearFilter-d17b00ef"));
-      if (name === "viewof projection_switch") return new Inspector(document.querySelector("#observablehq-viewof-projection_switch-d17b00ef"));
-      if (name === "key") return new Inspector(document.querySelector("#observablehq-key-d17b00ef"));
-      if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-d17b00ef"));
-      if (name === "viewof keyz") return new Inspector(document.querySelector("#observablehq-viewof-keyz-d17b00ef"));
-      if (name === "viewof columns_coordinates") return new Inspector(document.querySelector("#observablehq-viewof-columns_coordinates-d17b00ef"));
-      if (name === "viewof selection") return new Inspector(document.querySelector("#observablehq-viewof-selection-d17b00ef"));
-      return ["data","x","z","line","projection"].includes(name);
+    if (name === "viewof yearFilter") return new Inspector(document.querySelector("#observablehq-viewof-yearFilter-9bca8110"));
+    if (name === "viewof projection_switch") return new Inspector(document.querySelector("#observablehq-viewof-projection_switch-9bca8110"));
+    if (name === "key") return new Inspector(document.querySelector("#observablehq-key-9bca8110"));
+    if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-9bca8110"));
+    if (name === "viewof keyz") return new Inspector(document.querySelector("#observablehq-viewof-keyz-9bca8110"));
+    if (name === "viewof columns_coordinates") return new Inspector(document.querySelector("#observablehq-viewof-columns_coordinates-9bca8110"));
+    if (name === "viewof selection") return new Inspector(document.querySelector("#observablehq-viewof-selection-9bca8110"));
+    return ["data","x","z","line","projection"].includes(name);
     });
     </script>
 </body>
 </html>
+
+
