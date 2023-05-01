@@ -34,7 +34,8 @@ Ao apresentar o *MVP* em sala e levar em consideração o *feedback* dos colegas
 Assim, para a versão final consertamos os problemas mencionados acima. Além disso, decidimos que as projeções finais seriam a *Equal Earth*, apresentando uma visão geral dos países, e a *Orthographic*, que permite uma visão mais detalhada de regiões e amplifica a interatividade e do usuário com o mapa, com o objetivo de reter o interesse do usuário.
 Em relação à interatividade, adicionamos a possibilidade de destacar um país nas coordenadas paralelas ao realizar *hover* sobre ele. Também podemos utilizar do *brush* para selecionar um intervalo nas coordenadas paralelas que limitará os países exibidos no mapa.
 O resultado final pode ser visto abaixo:
-[inserir imagem do final]
+
+![MVP](./images/final.png)
 
 
 #### Equipe e divisão de tarefas
