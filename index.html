@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>🌎 Charting the World </title>
+    <link rel="icon" href="icon.png">
 </head>
 <body>
     <div class="visualization">
@@ -16,44 +17,170 @@
             </div>
             <div class="space"></div>
             <div class="selectors">
-                <div id="observablehq-viewof-keyz-9bca8110"></div>
+                <div id="observablehq-viewof-keyz-4370a58e"></div>
             </div>
         </div>
         <div class="left">
-            <div class="yearSlider" id="observablehq-viewof-yearFilter-9bca8110"></div>
-            <div class="projectionToggle" id="observablehq-viewof-projection_switch-9bca8110"></div>
-            <div class="colorLabel" id="observablehq-key-9bca8110"></div>
-            <div id="chart"><div id="observablehq-chart-9bca8110"></div></div>
+            <div class="yearSlider" id="observablehq-viewof-yearFilter-4370a58e"></div>
+            <div class="projectionToggle" id="observablehq-viewof-projection_switch-4370a58e"></div>
+            <div class="colorLabel" id="observablehq-key-4370a58e"></div>
+            <div id="chart"><div id="observablehq-viewof-page-4370a58e"></div></div>
         </div>
         <div class="right">
             <div class="innerRight">
-                <div class="features_selector" id="observablehq-viewof-columns_coordinates-9bca8110"></div>
-                <!-- <div class="features_selector"></div> -->
-                <div class="parallel_coords" id="observablehq-viewof-selection-9bca8110"></div>
+                <div class="features_selector" id="observablehq-viewof-columns_coordinates-4370a58e"></div>
+                <div class="parallel_coords" id="observablehq-viewof-pc_view-4370a58e"></div>
+                <div class="countries" id="observablehq-viewof-count_countries-4370a58e"></div>
             </div>
         </div>
     </div>
     
+    <div class="explanation">
+        <div class="go-down">🠿</div>
+        <!-- <div class="project">
+            <h2>The project</h2>
+            <p>
+                This project aims for providing a good visualization for general pourposes data for a range of diverse indicators along the globe.
+                 The data used for this project came from <a href="https://www.worldbank.org/en/home">World Bank</a> Data Indicators, 
+                 we used some of the datasets from
+                 <a href="https://github.com/light-and-salt/World-Bank-Data-by-Indicators">here</a>.
+                 The data was processed using Python and the visualization was made using D3 and observablehq, a
+                 <a href="https://observablehq.com/d/73cb3dcdc6d879de">notebook</a> for the visualization is avaliable.
+                 <p>We are doing that by providing two graphics, one for the overview of the columns the user will be able to visualize, the
+                 <b>parallel coordinates graphic</b>: wich will guide you throughout a geneeral overview of the data values and the relations
+                 among the different columns, with the possibility to add and remove columns to visualize all kinds of combinations. - and the
+                 <b>cloropleth graphic</b>, wich will provide a worldwide geo-contextualized view of the indicator, so that the user can quicly identify
+                 the value of one indicator in each country at the same time, and get insights of the data.</p>
+            </p>
+        </div>
+        <div class="interactivity">
+            <h2>
+                The interactivity
+            </h2>
+            <p>
+                Our project aims to a functional, intuitive and fun experience for the user, so we provide a lot of interactivity for the user to
+                explore the data and get insights from it. 
+                Our goal is to provide answers for questions that the user might have about the data, and also to provide more questions for the user by
+                showing him the data in a way that he can explore it and get insights from it.
+                The visualization set up works in a way that we provide ways to anser most general kinds of questions about the data, like "When", "Where",
+                "How much", "How does it compare", "How does it relate", "How does it vary"...
+                The interactivity is the key for this kind of exploration, we can provide lots of info withouth overloading the user with all the information at once.
+                The user will be able to select the indicator he wants to visualize, the year he wants to see (we provide a slider so that he can see the
+                development of the indicators), the prefered projection of the map, the columns he wants to visualize in the parallel coordinates graphic, and hover
+                the countries he wants to see in the cloropleth graphic. The user will also be able to select a range of countries on the parallel coordinates graphic and see them
+                highlighted in the cloropleth graphic, and also hover a country in the cloropleth graphic and see it highlighted in the parallel coordinates.
+            </p>
+        </div> -->
+        <div class="project">
+            <h2>The Project</h2>
+            <p>
+              This project aims to provide effective data visualization for a wide range of indicators from around the world. The data used in this project is sourced from World Bank Data Indicators, which we obtained from <a href="https://github.com/light-and-salt/World-Bank-Data-by-Indicators">here</a>, and was processed using Python. Our visualization is created using D3 and ObservableHQ. You can access the notebook for the visualization <a href="https://observablehq.com/d/73cb3dcdc6d879de">here</a>.
+            </p>
+            <p>
+                We provide two main visualizations: the <b>parallel coordinates graph</b> and the <b>choropleth map</b>. The parallel coordinates graph provides a comprehensive overview of the data, allowing users to view different combinations of columns and explore the relationships between them. The choropleth map provides a global view of the data, allowing users to easily identify and compare the value of one indicator across different countries.
+            </p>
+          </div>
+          
+          <div class="interactivity">
+            <h2>The Interactivity</h2>
+            <p>
+              Our project aims to provide users with a functional, intuitive, and enjoyable experience. We offer a wide range of interactivity options to help users explore and gain insights from the data. Our goal is to provide answers to users' questions while also prompting new ones by presenting the data in a way that facilitates exploration and discovery. 
+            </p>
+            <p>
+              To support this, we have designed the visualization in a way that enables users to answer various kinds of questions, such as "When?", "Where?", "How much?", "How does it compare?", "How does it relate?", "How does it vary?" and more. We provide the user with a range of options to interact with the data, including selecting the indicator, year, preferred map projection, and columns to visualize in the parallel coordinates graph. Users can also hover over countries on the choropleth map to see their values, and select a range of countries on the parallel coordinates graph to highlight them on the choropleth map. Additionally, hovering over a country in the choropleth map highlights it on the parallel coordinates graph.
+            </p>
+            <p>
+              The following is a list of some of the interactive features we offer:
+            </p>
+              <ul>
+                <li>Selecting the indicator</li>
+                <li>Selecting the year of interest with a slider</li>
+                <li>Selecting the preferred map projection</li>
+                <li>Selecting the columns to visualize in the parallel coordinates graph</li>
+                <li>Hovering over countries in the choropleth map to see their values</li>
+                <li>Selecting a range of countries on the parallel coordinates graph to highlight them on the choropleth map</li>
+                <li>Hovering over a country in the choropleth map to highlight it on the parallel coordinates graph</li>
+              </ul>
+          </div>
+          
+        <div class="map">
+            <h2>
+                The map
+            </h2>
+            <p>
+                The main focus of the page is of course the map, wich is the visualization that will put the countries in geographic context, and will provide the
+                user with the most information. The map is a <b>choropleth map</b>, wich means that the countries will be colored according to the value of the indicator
+                in that country. The map will also provide the user with the possibility to select the year he wants to see, and the projection he prefers.
+            </p>
+            <p>
+                The Equal Earth projection is a relatively new map projection that was designed to address some of the shortcomings of other projections, particularly those that distort the sizes and shapes of landmasses. It was created by Bojan Šavrič, Tom Patterson, and Bernhard Jenny, and is based on the Robinson projection, which was already a compromise projection intended to balance visual appeal with geographic accuracy.
+            </p>
+            <p>
+                One of the key advantages of the Equal Earth projection is that it provides a more accurate representation of areas than many other projections, particularly in the high latitudes. This is because it preserves both area and shape while minimizing distortion, which means that the sizes and shapes of countries and continents are more accurately portrayed. This makes it a good choice for visualizations that aim to show global patterns or comparisons, particularly when it comes to geographic or spatial data.
+            </p>
+            <p>
+                In our cloropeth visualization, using the Equal Earth projection can help ensure that viewers are able to accurately interpret the values and patterns being shown, without being misled by distortions in the map. By presenting data on a map that is as accurate and faithful to reality as possible, it can provide a more reliable and informative representation of the data. Additionally, the Equal Earth projection has a visually pleasing and balanced appearance, which can help make the visualization more engaging and appealing to viewers.
+            </p>
+                
+            <p>
+                In addition to the Equal Earth projection, our project also offers an alternative way to visualize the data using a 3D, draggable globe. This option provides a more interactive and immersive way to explore the data, allowing users to rotate the globe to view different regions and countries in more detail.
+            </p>
+            <p> 
+                One advantage of the globe option is that it provides a more intuitive and familiar way to explore the data, and also focus the view on a particular region of the globe, like a continent filter, and in this way, the variation of the data gets more apparent in this region context view. Additionally, the ability to rotate the globe get the users to engage with the visualization and can help the user absorb its information by doing it little by little instead of a all at once approach like the previous projection.
+            </p>
+            <p>    
+                Overall, we believe that the 3D, draggable globe option provides a valuable addition to our project, offering users a unique and engaging way to explore the data and gain insights into global trends and patterns, but we also choose to leave it as a second option so that the user can use it only if want to explore the data.
+            </p>
+        </div>
+    </div>
+
     <p>Credit: <a href="https://observablehq.com/d/73cb3dcdc6d879de">Charting the World</a> by <a href="https://github.com/GustavoSanches55">Gustavo</a>, <a href="https://github.com/LucasTreuke">Lucas</a> and <a href="https://github.com/RodrigoPintucci">Rodrigo</a></p>
     <p>The data used for this project came from <a href="https://www.worldbank.org/en/home">World Bank</a> Data Indicators, we used some of the datasets from <a href="https://github.com/light-and-salt/World-Bank-Data-by-Indicators">here.</a></p>
         
         
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
     <script type="module">
     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-    import define from "https://api.observablehq.com/d/73cb3dcdc6d879de@852.js?v=3";
+    import define from "https://api.observablehq.com/d/73cb3dcdc6d879de.js?v=3";
     new Runtime().module(define, name => {
-    if (name === "viewof yearFilter") return new Inspector(document.querySelector("#observablehq-viewof-yearFilter-9bca8110"));
-    if (name === "viewof projection_switch") return new Inspector(document.querySelector("#observablehq-viewof-projection_switch-9bca8110"));
-    if (name === "key") return new Inspector(document.querySelector("#observablehq-key-9bca8110"));
-    if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-9bca8110"));
-    if (name === "viewof keyz") return new Inspector(document.querySelector("#observablehq-viewof-keyz-9bca8110"));
-    if (name === "viewof columns_coordinates") return new Inspector(document.querySelector("#observablehq-viewof-columns_coordinates-9bca8110"));
-    if (name === "viewof selection") return new Inspector(document.querySelector("#observablehq-viewof-selection-9bca8110"));
-    return ["data","x","z","line","projection"].includes(name);
+        if (name === "viewof page") return new Inspector(document.querySelector("#observablehq-viewof-page-24199850"));
+        if (name === "viewof projection_switch") return new Inspector(document.querySelector("#observablehq-viewof-projection_switch-24199850"));
+        if (name === "viewof yearFilter") return new Inspector(document.querySelector("#observablehq-viewof-yearFilter-24199850"));
+        if (name === "viewof keyz") return new Inspector(document.querySelector("#observablehq-viewof-keyz-24199850"));
+        if (name === "key") return new Inspector(document.querySelector("#observablehq-key-24199850"));
+        if (name === "viewof columns_coordinates") return new Inspector(document.querySelector("#observablehq-viewof-columns_coordinates-24199850"));
+        if (name === "viewof selection") return new Inspector(document.querySelector("#observablehq-viewof-selection-24199850"));
+        return ["projection","Choropleth","chart","data","scale_aux","years","z"].includes(name);
     });
     </script>
 </body>
 </html>
 
 
+
+
+
+
+
+
+
+
+<p>Credit: <a href="https://observablehq.com/d/73cb3dcdc6d879de">Charting the World by amigos</a></p>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/73cb3dcdc6d879de.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof page") return new Inspector(document.querySelector("#observablehq-viewof-page-4370a58e"));
+  if (name === "viewof pc_view") return new Inspector(document.querySelector("#observablehq-viewof-pc_view-4370a58e"));
+  if (name === "viewof projection_switch") return new Inspector(document.querySelector("#observablehq-viewof-projection_switch-4370a58e"));
+  if (name === "viewof yearFilter") return new Inspector(document.querySelector("#observablehq-viewof-yearFilter-4370a58e"));
+  if (name === "viewof keyz") return new Inspector(document.querySelector("#observablehq-viewof-keyz-4370a58e"));
+  if (name === "key") return new Inspector(document.querySelector("#observablehq-key-4370a58e"));
+  if (name === "viewof columns_coordinates") return new Inspector(document.querySelector("#observablehq-viewof-columns_coordinates-4370a58e"));
+  if (name === "viewof count_countries") return new Inspector(document.querySelector("#observablehq-viewof-count_countries-4370a58e"));
+  return ["projection","Choropleth","chart","viewof selection","data","scale_aux","years","z"].includes(name);
+});
+</script>
