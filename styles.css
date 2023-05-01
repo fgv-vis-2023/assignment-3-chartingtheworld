@@ -43,6 +43,7 @@
   line-height: 1;
   vertical-align: top;
   transform: translateY(-15%);
+  pointer-events: none;
 }
 
 .explanation ul{
