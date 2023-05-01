@@ -4,7 +4,7 @@
 
 Esse projeto é fruto de uma atividade da disciplina de Visualização de Dados do curso de Ciência de Dados da *FGV*. O objetivo é implementar uma visualização interativa e animada, buscando utilizar ferramentas e técnicas aprendidas durante o curso de acordo com sua efetividade.
 Decidimos, portanto, trazer uma visão de indicadores de desenvolvimento humano ao redor do mundo, utilizando de dados da [World Bank Data Indicators](https://github.com/light-and-salt/World-Bank-Data-by-Indicators).
-Para isto, utilizamos do *d3.js* para a construção da visualização, sendo importado para um arquivo *HTML* que pode ser acessado através do nosso [site github-pages](https://fgv-vis-2023.github.io/assignment-3-chartingtheworld/). O source code pode ser encontrado neste [notebook](https://observablehq.com/d/73cb3dcdc6d879de)
+Para isto, utilizamos do *d3.js* para a construção da visualização, sendo importado para um arquivo *HTML* que pode ser acessado através do nosso [site github-pages](https://fgv-vis-2023.github.io/assignment-3-chartingtheworld/). O source code pode ser encontrado neste [notebook](https://observablehq.com/d/73cb3dcdc6d879de).
 
 ## Desenvolvimento
 
